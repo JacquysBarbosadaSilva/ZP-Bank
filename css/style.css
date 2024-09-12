@@ -1,0 +1,500 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+:root {
+    --accent-color: #fff;
+    --gradient-color: #FBFBFB;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 999;
+    width: 240px;
+    left: 0; /* Sidebar sempre visível e fixada à esquerda */
+    height: 100%;
+    background-color: #202020;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 70px;
+    text-align: center;
+    background-color: #202020;
+    border-top-right-radius: 5px;
+    user-select: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.sidebar .link-sidebar {
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: #ffffff;
+    line-height: 65px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-left: 5px solid transparent;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    transition: all .5s ease;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.link-sidebar.active,
+.link-sidebar:hover {
+    border-left: 5px solid var(--accent-color);
+    color: #fff;
+    background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+}
+
+.sidebar .link-sidebar i {
+    font-size: 23px;
+    margin-right: 16px;
+}
+
+.sidebar .link-sidebar span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Removendo ou ajustando o código do botão de menu */
+
+label #btn,
+label #cancel {
+    display: none; /* Escondendo os botões de abrir/fechar a sidebar */
+}
+
+/* Ajustes de layout para dispositivos menores */
+@media (max-width: 860px) {
+    .sidebar {
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header, #btn, #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar .link-sidebar {
+        height: 60px;
+    }
+
+    .sidebar .link-sidebar i {
+        margin-left: -10px;
+    }
+
+    .link-sidebar:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar .link-sidebar:hover span {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.sidebar > .link-sidebar.active,
+.sidebar > .link-sidebar:hover {
+    --accent-color: #176273;
+    --gradient-color: #102226;
+}
+
+.margin_sidebar{
+    margin-left: 240px;
+}
+
+
+/* Gerenciador_despesas */
+
+.conteudo_da_pagina{
+    margin-left: 240px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #102226, #14343E, #103740, #ffffff);
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.logo_da_empresa{
+    border: none;
+    border-radius: 10px;
+    width: 700px;
+    margin: 0 auto;     
+    
+}
+
+.icones_controle_de_financiamento{
+    width: 20px;
+}
+
+#icon_transacao{
+    height: 25px;
+    margin-left: 25px;
+}
+
+.titulo_controle_financiamento{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;  
+    height: 10px;
+}
+
+.tamanho{
+    display: flex;
+    height: 80px;
+    padding: 10px;
+    width: 330px;
+    justify-content: start;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.informacoes{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.valores_saldo{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.tamanho_trasicao{
+    margin-top: 50px;
+    display: flex;
+    height: 250px;
+    padding: 10px;
+    width: 98,5%;
+    justify-content: start;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    align-items: baseline;
+}
+
+.alinhamento_titulo_transacao{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.alinhamento_controle_finaciamento{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    
+}
+
+.button-add-nova-transacao{
+    background: none;
+    border: none;
+}
+
+/* Simulador Financeiro */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 120px;
+    background-color: #000000; 
+}
+
+.logo_paginas img {
+    height: auto;
+    width: 220px; 
+}
+
+#h1-simulador{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#p-simulador{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tipos-finan{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-infor{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-infor, label, input{
+    display: flex;
+    flex-direction: column;
+}
+
+ input{
+    width: 500px;
+    height: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+hr {
+    border: none;
+    border-top: 1px solid black;
+    margin: 10px; 
+    width: 510px;
+}
+
+.resul-simulacao, p{
+    text-align: center;
+    margin-top: 8px;
+}
+
+#text-mes{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meses{
+    margin-bottom: 0;
+}
+
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+  
+
+/* Educação */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --accent-color: #fff;
+    --gradient-color: #FBFBFB;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 999;
+    width: 240px;
+    left: 0;
+    height: 100%;
+    background-color: #202020;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 70px;
+    text-align: center;
+    background-color: #202020;
+    user-select: none;
+}
+
+.sidebar .link-sidebar {
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: #ffffff;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-left: 5px solid transparent;
+    text-decoration: none;
+    transition: all .5s ease;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.link-sidebar.active,
+.link-sidebar:hover {
+    border-left: 5px solid var(--accent-color);
+    color: #fff;
+    background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+}
+
+.sidebar .link-sidebar i {
+    font-size: 23px;
+    margin-right: 16px;
+}
+
+.sidebar .link-sidebar span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+label #btn,
+label #cancel {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .sidebar {
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header,
+    #btn,
+    #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar .link-sidebar {
+        height: 60px;
+    }
+
+    .sidebar .link-sidebar i {
+        margin-left: -10px;
+    }
+
+    .link-sidebar:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar .link-sidebar:hover span {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.sidebar>.link-sidebar.active,
+.sidebar>.link-sidebar:hover {
+    --accent-color: #32d7fd;
+    --gradient-color: #006bdc;
+}
+
+/* Main */
+#main-educacao {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+#h1-educacao {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#container-educacao {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.p-educacao {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 300px;
+}
+
+.escrita-card {
+    padding: 10px;
+}
+
+.botao-juros {
+    background-color: #006bdc;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    height: 400px;
+    width: 300px;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.active.botao-juros {
+    background-color: #202020;
+}
+
+
+
+/* Media */
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .conteudo_da_pagina {
+        margin-left: 0; /* Sidebar será sobreposta, então removemos o espaço lateral */
+        padding: 10px;
+    }
+
+    .logo_da_empresa {
+        width: 100%; /* Logo se adapta à largura da tela */
+    }
+
+    .tamanho {
+        width: 100%;
+        padding: 5px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alinhamento_controle_finaciamento {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+

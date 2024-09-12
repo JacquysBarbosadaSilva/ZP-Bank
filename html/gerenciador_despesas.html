@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/main.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="sidebar">
+    
+            <header>Menu</header>
+            
+            <a href="../index.html" class="link-sidebar">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+            </a>
+
+            <a href="./gerenciador_despesas.html" class="link-sidebar active">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+            <span>Gerenciador de Despesas</span>
+            </a>
+            
+            <a href="./simuladorFinanceiro.html" class="link-sidebar">
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <span>Simulador Financeiro</span>
+            </a>
+        
+            <a href="./educacao.html" class="link-sidebar">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span>Educação</span>
+            </a>
+            
+        </div>
+
+        <main class="conteudo_da_pagina">
+            <img class="logo_da_empresa" src="../img/logo_empresa_gif.gif" alt="Logo da empresa">
+
+            <div class="alinhamento_controle_finaciamento">
+                <div class="cards tamanho">
+
+                    <div class="informacoes">
+                        <h3 class="titulo_controle_financiamento">Entradas:</h3>
+                        <img class="icones_controle_de_financiamento" src="../assets/plus.svg" alt="">
+                    </div>
+
+                    <div class="valores_saldo">
+                        <h3>R$</h3>
+                        <h3>0,00</h3>
+                    </div>
+                    
+                </div>
+
+                <div class="cards tamanho">
+                    <div class="informacoes">
+                        <h3 class="titulo_controle_financiamento">Saídas:</h3>
+                        <img class="icones_controle_de_financiamento" src="../assets/minus.svg" alt="">
+                    </div>
+                    
+                    <div class="valores_saldo">
+                        <h3>R$</h3>
+                        <h3>0,00</h3>
+                    </div>
+                </div>
+
+                 <div class="cards tamanho">
+                    <div class="informacoes">
+                        <h3 class="titulo_controle_financiamento">Total:</h3>
+                        <img class="icones_controle_de_financiamento" src="../assets/income.svg" alt="">
+                    </div>
+                    
+                    <div class="valores_saldo">
+                        <h3>R$</h3>
+                        <h3>0,00</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transacao">
+                <div class="nova_transacao tamanho_trasicao">
+                    <div class="alinhamento_titulo_transacao">
+                        <h3 class="titulo_transacao">Nova transação</h3>
+                        <button id="button-add-nova-transacao"><img id="icon_transacao" src="../assets/mais.svg" alt=""></button>
+                    </div>
+
+                    <div id="fade"></div>
+                    <div id="id-modal-transacao">
+                        <div class="modal-content">
+                            <p>Some text in the Modal..</p>
+                            <button id="close-modal"><img src="../assets/menos.png" alt=""></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>teste para o modal</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+
+    </body>
+
+</html>

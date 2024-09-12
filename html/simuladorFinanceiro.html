@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="./js/main.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="sidebar">
+    
+            <header>Menu</header>
+            
+            <a href="../index.html" class="link-sidebar">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+            </a>
+
+            <a href="./gerenciador_despesas.html" class="link-sidebar">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+            <span>Gerenciador de Despesas</span>
+            </a>
+            
+            <a href="./simuladorFinanceiro.html" class="link-sidebar active">
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <span>Simulador Financeiro</span>
+            </a>
+        
+            <a href="./educacao.html" class="link-sidebar">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span>Educação</span>
+            </a>
+            
+        </div>
+   
+        <main class="margin_sidebar">
+            <nav class="navbar">
+                <div class="logo_paginas">
+                    <img src="../img/logo_empresa_gif.gif" alt="Logo da empresa">
+                </div>
+            </nav>
+            <h1 id="h1-simulador">Simulador de Financiamento</h1>
+        
+            <div class="infor">
+
+        
+
+            <form class="form-infor" action="form-infor">
+                <p id="p-simulador">Tipo de Financiamento:</p>
+                <select onselect=""  class="tipos-finan">
+                    <option value="imobiliario">Imobiliário</option>
+                    <option value="estudantil">Estudantil</option>
+                    <option value="veiculos">Veículos</option>
+                </select>
+
+                <label for="valor">Valor total (R$):</label>
+                <input type="number" id="valor" name="number">
+
+                <label for="prazo">Prazo (Meses):</label>
+                <input type="range" id="meses" min="1" max="360" value="1" />
+                <div id="text-mes">
+                    <span>Meses</span>
+
+                <button>Calcular</button>
+
+                <hr>
+            </form>
+            
+            
+
+            <div class="resul-simulacao">
+                <h2>Resultado da Simulação</h2>
+                <p>Valor da Parcela:</p>
+                <p>Custo Total do Crédito:</p>
+                <p>Total de Juros Pago:</p>
+            </div>
+            
+        </div>
+
+        </main>
+        
+    </body>
+
+</html>
