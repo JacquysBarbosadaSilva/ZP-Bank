@@ -47,45 +47,56 @@
                 </div>
             </nav>
             <h1 id="h1-simulador">Simulador de Financiamento</h1>
-        
+    
             <div class="infor">
-
-        
-
-            <form class="form-infor" action="form-infor">
-                <p id="p-simulador">Tipo de Financiamento:</p>
-                <select onselect=""  class="tipos-finan">
-                    <option value="imobiliario">Imobiliário</option>
-                    <option value="estudantil">Estudantil</option>
-                    <option value="veiculos">Veículos</option>
-                </select>
-
-                <label for="valor">Valor total (R$):</label>
-                <input type="number" id="valor" name="number">
-
-                <label for="prazo">Prazo (Meses):</label>
-                <input type="range" id="meses" min="1" max="360" value="1" />
-                <div id="text-mes">
-                    <span>Meses</span>
-
-                <button>Calcular</button>
-
-                <hr>
-            </form>
-            
-            
-
-            <div class="resul-simulacao">
-                <h2>Resultado da Simulação</h2>
-                <p>Valor da Parcela:</p>
-                <p>Custo Total do Crédito:</p>
-                <p>Total de Juros Pago:</p>
+    
+    
+    
+                <form class="form-infor" action="form-infor">
+                    <p id="p-simulador">Tipo de Financiamento:</p>
+                    <select onselect="" class="tipos-finan">
+                        <option value="imobiliario">Imobiliário</option>
+                        <option value="estudantil">Estudantil</option>
+                        <option value="veiculos">Veículos</option>
+                    </select>
+    
+                    <label for="valor">Valor total (R$):</label>
+                    <input type="number" id="valor" name="number">
+    
+                    <label for="prazo">Prazo (Meses):</label>
+                    <input type="range" id="meses" min="1" max="360" oninput="mudarMeses(this.value)" value="1"/>
+                    <div id="text-mes">
+                        <span id="md-meses">0 Meses</span>
+                    </div>
+    
+                    <label for="taxa">Taxa de Juros (% a.a):</label>
+                    <input type="number" id="taxa-juros" name="number">
+    
+                    <button id="calcular">Calcular</button>
+    
+                    <hr>
+                </form>
+    
+    
+    
+                <div class="resul-simulacao">
+                    <h2>Resultado da Simulação</h2>
+                    <p id="valor-parcela">Valor da Parcela:</p>
+                    <p id="total-credito">Custo Total do Crédito:</p>
+                    <p id="juros-pago">Total de Juros Pago:</p>
+                </div>
+    
             </div>
-            
-        </div>
-
+    
         </main>
         
     </body>
+
+    <script>
+        function mudarMeses(value) {
+            document.getElementById('md-meses').textContent = value + ' meses';
+        }
+    </script>
+
 
 </html>

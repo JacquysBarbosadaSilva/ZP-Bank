@@ -36,12 +36,17 @@
             </a>
             
         </div>
-        
+
         <main id="main-educacao">
-            <h1 id="h1-educacao">Conhecendo melhor sobre juros</h1>
+        <h1 id="h1-educacao">Conhecendo melhor sobre juros</h1>
+        <section class="section-educacao">
+            <p id="introducao-juros">Juros são o valor do dinheiro no tempo. Ou seja, funcionam como se fossem o aluguel do dinheiro. Os bancos e outras instituições financeiras fazem a intermediação entre quem tem dinheiro (poupador ou investidor) e quem precisa de dinheiro (tomador ou devedor).</p>
+            <img id="imagem-juros" src="../img/imagem-juros.jpg" alt="">
+        </section>
+        <section class="section-educacao">
             <div id="container-educacao">
                 <div class="card-juros">
-                    <button class="botao-juros">Juros simples</button>
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros simples</button>
                     <div class="p-educacao">
                         <p class="escrita-card">Juros simples representam um acréscimo calculado sobre o valor inicial de uma aplicação
                             financeira ou uma compra feita a crédito.</p>
@@ -49,7 +54,7 @@
                 </div>
     
                 <div class="card-juros">
-                    <button class="botao-juros">Juros compostos</button>
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros compostos</button>
                     <div class="p-educacao">
                         <p class="escrita-card">No sistema de juros compostos, a taxa é calculada com base no capital inicial somente no primeiro
                             mês. Nos demais, é sempre calculada com base no capital do mês anterior.</p>
@@ -57,7 +62,7 @@
                 </div>
     
                 <div class="card-juros">
-                    <button class="botao-juros">Juros nominais</button>
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros nominais</button>
                     <div class="p-educacao">
                         <p class="escrita-card">São aqueles especificados em contratos, sejam de empréstimos, financiamentos ou aplicações
                             financeiras. Eles são uma categoria de juros que expressam o rendimento bruto de uma aplicação.
@@ -66,7 +71,7 @@
                 </div>
     
                 <div class="card-juros">
-                    <button class="botao-juros">Juros reais</button>
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros reais</button>
                     <div class="p-educacao">
                         <p class="escrita-card">Os juros reais são aqueles que consideram a inflação no cálculo. Eles representam o ganho efetivo
                             de uma aplicação ou o custo real de um empréstimo.</p>
@@ -74,7 +79,7 @@
                 </div>
     
                 <div class="card-juros">
-                    <button class="botao-juros">Juros de mora</button>
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros de mora</button>
                     <div class="p-educacao">
                         <p class="escrita-card">Os juros de mora são aplicados em casos de atraso no pagamento de uma dívida, sendo uma forma de
                             penalização pelo atraso.</p>
@@ -82,22 +87,23 @@
                 </div>
     
                 <div class="card-juros">
-                    <button class="botao-juros">Juros rotativos</button>
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros rotativos</button>
                     <div class="p-educacao">
                         <p class="escrita-card">Juros rotativos são aplicados no caso de não pagamento total da fatura do cartão de crédito,
                             incidindo sobre o saldo devedor.</p>
                     </div>
                 </div>
     
-                <div class="card-juros">
-                    <button class="botao-juros">Juros sobre capital próprio</button>
+                <div id="card-meio" class="card-juros">
+                    <button class="botao-juros" onclick="alternarConteudo(this)">Juros sobre capital próprio</button>
                     <div class="p-educacao">
                         <p class="escrita-card">Os juros sobre capital próprio (JCP) são uma forma de remuneração aos acionistas de uma empresa,
                             semelhante aos dividendos.</p>
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
+    </main>
 
 
     </body>
