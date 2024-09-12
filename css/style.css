@@ -384,13 +384,17 @@ label #cancel {
     justify-content: space-between;
     
 }
-
-.button-add-nova-transacao{
-    background: none;
-    border: none;
+#button-add-nova-transacao{
+    cursor: pointer !important;
 }
 
-/* #fade{
+#fade, #id-modal-transacao{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
     position: fixed;
     top: 0;
     left: 0;
@@ -402,13 +406,13 @@ label #cancel {
 
 #id-modal-transacao{
     position: fixed;
-    left: 60%;
-    border-radius: 10px;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 65%;
-    top:50%;
+    width: 50%;
     background-color: white;
-    padding: 50px;
+    border-radius: 10px;
+    padding: 20px;
     z-index: 10;
 }
 
@@ -416,10 +420,19 @@ label #cancel {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
 
+#id-modal-transacao.hide,
+#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#id-modal-transacao.hide{
+    top:0;
+}
 
 #close-modal-icon{
     width: 25px;
@@ -427,7 +440,20 @@ label #cancel {
 
 #close-modal{
     width: 50px;
-} */
+}
+
+#lista-transacoes {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.transacao-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
 /* Simulador Financeiro */
 
@@ -483,7 +509,7 @@ label #cancel {
     margin-bottom: 15px;
 }
 
-button{
+#calcular{
     background-color: #0D2226;
     color: white;
     width: 500px;
