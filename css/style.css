@@ -318,7 +318,6 @@ label #cancel {
 
 #icon_transacao{
     height: 25px;
-    margin-left: 25px;
 }
 
 .titulo_controle_financiamento{
@@ -359,24 +358,301 @@ label #cancel {
     align-items: start;
 }
 
-.tamanho_trasicao{
-    margin-top: 50px;
-    display: flex;
-    height: 250px;
-    padding: 10px;
-    width: 98,5%;
-    justify-content: start;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    align-items: baseline;
-}
-
 .alinhamento_titulo_transacao{
     display: flex;
     width: 100%;
+    align-items: center;
     padding: 10px;
+    justify-content: space-between;
 }
+
+
+.div-table{
+    width: 100%;
+}
+
+table {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+th {
+    color: #333;
+    font-weight: bold;
+}
+
+td img,svg {
+    max-width: 25px;
+    cursor: pointer;
+}
+
+th,
+td {
+    padding: 20px;
+
+    text-align: left;
+
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* MODAL */
+
+.modal-container2 {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000086;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#modal2 {
+    position: fixed;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 700px;
+    height: 480px;
+    max-width: 90%;
+    padding: 70px;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+}
+
+#modal2 h1 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.modal-container2.mostrar {
+    display: flex;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form label {
+    font-size: 15px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.form input {
+    padding: 10px;
+    margin: 5px 0 5px;
+    border: 1px solid black;
+}
+
+.form-instrucao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-instrucao input[type="number"],
+input[type="text"] {
+    padding: 10px;
+    margin: 5px 0 5px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.form-instrucao p {
+    margin-left: 10px;
+    font-size: 12px;
+    max-width: 250px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input[type=date] {
+    padding: 10px;
+    margin: 5px 0 5px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+    width: 100%;
+}
+
+.button-group #close-modal2 {
+    color: #d9534f;
+    background-color: transparent;
+    border: 2px solid #d9534f;
+    transition: all ease-in-out 0.2s;
+}
+
+.button-group #close-modal2:hover {
+    background-color: #d9534f;
+    color: white;
+    transition: all ease-in-out 0.2s;
+}
+
+.button-group #btnSalvarEdicao {
+    color: white;
+    background: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #102226, #14343E, #103740);
+    border: 2px solid linear-gradient(to bottom, #000000, #000000, #000000, #000000, #102226, #14343E, #103740);
+    transition: all ease-in-out 0.2s;
+}
+
+.button-group #btnSalvarEdicao:hover {
+    transform: scale(1.05);
+    transition: all ease-in-out 0.2s;
+}
+
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000086;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 700px;
+    height: 480px;
+    max-width: 90%;
+    padding: 70px;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+}
+
+#modal h1 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+#modal-container,
+.modal-container {
+    animation: animate-modal 0.2s;
+}
+
+.mostrar #modal {
+    animation: animate-modal 0.2s;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-instrucao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-instrucao input[type="number"],
+input[type="text"] {
+    padding: 10px;
+    margin: 5px 0 5px;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.form-instrucao p {
+    margin-left: 10px;
+    font-size: 12px;
+    max-width: 250px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input[type=date] {
+    padding: 10px;
+    margin: 5px 0 5px;
+    border: 1px solid black;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+    width: 100%;
+}
+
+.button-group #close-modal {
+    color: #d9534f;
+    background-color: transparent;
+    border: 2px solid #d9534f;
+    width: 100px;
+    transition: all ease-in-out 0.2s;
+}
+
+.button-group #close-modal:hover {
+    background-color: #d9534f;
+    color: white;
+    transition: all ease-in-out 0.2s;
+
+}
+
+.button-group #save-modal {
+    color: white;
+    background: linear-gradient(to bottom, #000000, #102226, #14343E, #103740);
+    border: 2px solid linear-gradient(to bottom, #000000, #102226, #14343E, #103740);
+    transition: all ease-in-out 0.2s;
+}
+
+.button-group #save-modal:hover {
+    transform: scale(1.05);
+    transition: all ease-in-out 0.2s;
+}
+
+
+
 
 .alinhamento_controle_finaciamento{
     display: flex;
@@ -384,8 +660,32 @@ label #cancel {
     justify-content: space-between;
     
 }
+
+.transacao{
+    margin-top: 50px;
+    display: flex;
+    height: 250px;
+    padding: 10px;
+    width: 98, 5%;
+    justify-content: start;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    align-items: baseline;
+    flex-direction: column;
+}
+
 #button-add-nova-transacao{
-    cursor: pointer !important;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#button-add-nova-transacao:hover {
+    background-color: #3e8e41;
 }
 
 #fade, #id-modal-transacao{
@@ -395,33 +695,60 @@ label #cancel {
 }
 
 #fade{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
 #id-modal-transacao{
+    display: none;
     position: fixed;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    background-color: white;
-    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
     padding: 20px;
-    z-index: 10;
+    border-radius: 10px;
+}
+
+#close-modal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-modal:hover {
+    background-color: #3e8e41;
+}
+
+#close-modal-icon{
+    height: 20px;
 }
 
 .modal-content{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
+}
+
+
+.modal-body{
+    padding: 20px;
 }
 
 #id-modal-transacao.hide,
@@ -453,6 +780,37 @@ label #cancel {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+#form-transacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#descricao, #valor{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#descricao:focus, #valor:focus{
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button[type="submit"]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
 }
 
 /* Simulador Financeiro */
