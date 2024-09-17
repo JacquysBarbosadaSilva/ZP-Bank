@@ -820,7 +820,7 @@ button[type="submit"]:hover {
     margin-bottom: 15px;
 }
 
-#calcular{
+button{
     background-color: #0D2226;
     color: white;
     width: 500px;
@@ -907,11 +907,6 @@ input[type=range]::-ms-track {
     border-width: 6px 0;
 }
 
-button{
-    cursor: pointer;
-    background: none;
-    border: none;
-}
 
 
 
