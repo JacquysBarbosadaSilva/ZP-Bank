@@ -43,8 +43,7 @@
                         <img class="icones_controle_de_financiamento" src="../assets/plus.svg" alt="Entradas Icon">
                     </div>
                     <div class="valores_saldo">
-                        <h3>R$</h3>
-                        <h3 id="entrada">0,00</h3>
+                        <h3 id="entrada"></h3>
                     </div>
                 </div>
 
@@ -54,8 +53,7 @@
                         <img class="icones_controle_de_financiamento" src="../assets/minus.svg" alt="Saídas Icon">
                     </div>
                     <div class="valores_saldo">
-                        <h3>R$</h3>
-                        <h3 id="saida">0,00</h3>
+                        <h3 id="saida"></h3>
                     </div>
                 </div>
 
@@ -65,8 +63,7 @@
                         <img class="icones_controle_de_financiamento" src="../assets/income.svg" alt="Total Icon">
                     </div>
                     <div class="valores_saldo">
-                        <h3>R$</h3>
-                        <h3 id="total">0,00</h3>
+                        <h3 id="total"></h3>
                     </div>
                 </div>
             </div>
@@ -82,21 +79,24 @@
                     </div>
                 </div>
 
-                <div class="div-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Descrição</th>
-                                <th>Valor</th>
-                                <th>Data</th>
-                                <th>Ação</th>
-                            </tr>
-                        </thead>
-                        <tbody id="listaRegistrosBody"></tbody>
-                    </table>
-                </div>
+                <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Despesas</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Ação</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listaRegistrosBody">
+
+                    </tbody>
+                  </table>
             </div>
         </main>
+        <footer>
+
+        </footer>
 
         <!-- Modal for New Transaction -->
         <form id="modal-container" class="modal-container">
@@ -111,7 +111,7 @@
                     <label for="number">Valor</label>
                     <div class="form-instrucao">
                         <input type="number" name="number" id="number" placeholder="R$0,00" required>
-                        <p>Use o sinal - (MENOS) para inserir uma despesa e use (VÍRGULA) para casas decimais</p>
+                        <p>Use o sinal "-"" (MENOS) para inserir uma despesa, e use (VÍRGULA) para casas decimais</p>
                     </div>
                     <label for="date">Data</label>
                     <input type="date" name="date" id="date" required>

@@ -289,19 +289,28 @@ label #cancel {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
+    
 }
 
 
+
 /* Gerenciador_despesas */
+footer{
+    height: 100px;
+}
 .conteudo_da_pagina{
     margin-left: 240px;
     padding: 20px;
-    background: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #102226, #14343E, #103740, #ffffff);
+    background: linear-gradient(to bottom, #000000, #000000, #102226, #14343E, #103740, #ffffff, #ffffff, #ffffff);
     height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     
+}
+
+.titulo_transacao{
+    margin: 0;
 }
 
 .logo_da_empresa{
@@ -341,6 +350,7 @@ label #cancel {
 
 .cards{
     display: flex;
+    box-shadow: 2px 2px 2px black;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -364,42 +374,11 @@ label #cancel {
     align-items: center;
     padding: 10px;
     justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-
-.div-table{
-    width: 100%;
-}
-
-table {
-    margin-top: 30px;
-    width: 100%;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-th {
-    color: #333;
-    font-weight: bold;
-}
-
-td img,svg {
-    max-width: 25px;
-    cursor: pointer;
-}
-
-th,
-td {
-    padding: 20px;
-
-    text-align: left;
-
-}
-
-tbody tr:hover {
-    background-color: #f1f1f1;
-}
 
 /* MODAL */
 
@@ -459,28 +438,6 @@ tbody tr:hover {
     padding: 10px;
     margin: 5px 0 5px;
     border: 1px solid black;
-}
-
-.form-instrucao {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.form-instrucao input[type="number"],
-input[type="text"] {
-    padding: 10px;
-    margin: 5px 0 5px;
-    width: 100%;
-    border: 1px solid black;
-}
-
-.form-instrucao p {
-    margin-left: 10px;
-    font-size: 12px;
-    max-width: 250px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-group input[type=date] {
@@ -592,7 +549,7 @@ input[type="text"] {
 input[type="text"] {
     padding: 10px;
     margin: 5px 0 5px;
-    width: 50%;
+    width: 80%;
     border: 1px solid black;
 }
 
@@ -664,14 +621,10 @@ input[type="text"] {
 .transacao{
     margin-top: 50px;
     display: flex;
-    height: 250px;
     padding: 10px;
-    width: 98, 5%;
     justify-content: start;
     border: none;
     border-radius: 5px;
-    background-color: white;
-    align-items: baseline;
     flex-direction: column;
 }
 
