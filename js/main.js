@@ -35,12 +35,12 @@ function render() {
         : `-R$${Math.abs(numero).toFixed(2)}`;
       
       return `
-        <tr style="margin-top: 200px;">
+        <tr style ="margin-top: 50px;">
           <td>${usuario.textUsuario}</td>
           <td ${estilo}>${numeroFormatado}</td>
           <td>${usuario.date}</td>
           <td>
-            <img onclick="editar(${index})" src="../img/editar.png" alt="Editar" width="28" height="28" viewBox="0 0 28 28" fill="none" cursor: pointer; >
+            <img onclick="editar(${index})" src="../img/editar.png" alt="Editar" width="28" height="28" style="cursor: pointer;">
             <svg onclick="deletar(${index})" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;">
               <path d="M14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2Z" stroke="#E83F5B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M7.57143 15.0713C6.97969 15.0713 6.5 14.5916 6.5 13.9999V13.9999C6.5 13.4082 6.97969 12.9285 7.57143 12.9285L20.4286 12.9285C21.0203 12.9285 21.5 13.4082 21.5 13.9999V13.9999C21.5 14.5916 21.0203 15.0713 20.4286 15.0713L7.57143 15.0713Z" fill="#E83F5B"/>
@@ -51,8 +51,6 @@ function render() {
     atualizarTotais();
   }
 }
-
-
 
 function atualizarTotais() {
   document.getElementById("entrada").textContent = `Entrada: R$${listaRegistros.entradaTotal.toFixed(2)}`;
@@ -199,35 +197,3 @@ window.addEventListener('load', () => {
     document.getElementById("modal-container2").classList.remove("mostrar");
   });
 });
-
-function editar(index) {
-  // Lógica para editar a transação
-  document.getElementById('indexEditando').value = index;
-  document.getElementById('editTextUsuario').value = listaRegistros.usuarios[index].textUsuario;
-  document.getElementById('editNumber').value = listaRegistros.usuarios[index].number;
-  document.getElementById('editDate').value = listaRegistros.usuarios[index].date;
-  document.getElementById('modal-container2').classList.add('mostrar');
-}
-
-function deletar(index) {
-  Swal.fire({
-    title: "Você tem certeza?",
-    text: "Não será possível reverter isso!",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Sim, Deletar!"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      listaRegistros.usuarios.splice(index, 1);
-      Swal.fire({
-        title: "Deletado!",
-        text: "Sua transação foi deletada",
-        icon: "success"
-      });
-      gravarBD();
-      render();
-    }
-  });
-}
