@@ -251,7 +251,6 @@ label #cancel {
 
 
 
-
 .section-2{
     padding: 50px 20px;
     background-color: #fbfbfb; 
@@ -266,6 +265,10 @@ label #cancel {
 .titulo-section2{
     text-transform: uppercase;
 }
+.titulo-ajuda-finaciamento{
+    text-transform: uppercase;
+    margin-top: 60px;
+}
 
 .inform-card {
     display: flex;
@@ -278,18 +281,34 @@ label #cancel {
     margin-bottom: 40px;
     max-width: 900px;
     margin: 0 auto;
+    margin-top: 80px;
 }
 
 .inform-text {
     flex: 1;
     padding-right: 20px;
+    text-align: justify;
 }
+
+.paragrafo-text{
+    margin-bottom: 25px;
+   
+}
+
 
 .inform-img img {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
-    
+}
+
+#imagem-financial2{
+    width: 200px;
+    height: 200px;
+}
+
+#financiador-imagem{
+    border-radius: 50%;
 }
 
 
@@ -813,14 +832,14 @@ button[type="submit"]:hover {
     flex-direction: column;
 }
 
- input{
+input{
     width: 500px;
     height: 35px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-button{
+#calcular {
     background-color: #0D2226;
     color: white;
     width: 500px;
@@ -828,7 +847,6 @@ button{
     margin-top: 20px;
     flex-direction: column;
     margin-bottom: 10px;
-    
 }
 
 hr {
