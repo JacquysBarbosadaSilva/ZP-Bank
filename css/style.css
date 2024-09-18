@@ -70,43 +70,7 @@ label #cancel {
 }
 
 /* Ajustes de layout para dispositivos menores */
-@media (max-width: 860px) {
-    .sidebar {
-        height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
-    }
 
-    header, #btn, #cancel {
-        display: none;
-    }
-
-    span {
-        position: absolute;
-        margin-left: 23px;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .sidebar .link-sidebar {
-        height: 60px;
-    }
-
-    .sidebar .link-sidebar i {
-        margin-left: -10px;
-    }
-
-    .link-sidebar:hover {
-        width: 200px;
-        background: inherit;
-    }
-
-    .sidebar .link-sidebar:hover span {
-        opacity: 1;
-        visibility: visible;
-    }
-}
 
 .sidebar > .link-sidebar.active,
 .sidebar > .link-sidebar:hover {
@@ -185,45 +149,7 @@ label #cancel {
     display: none;
 }
 
-@media (max-width: 860px) {
-    .sidebar {
-        height: auto;
-        width: 70px;
-        left: 0;
-        margin: 100px 0;
-    }
 
-    header,
-    #btn,
-    #cancel {
-        display: none;
-    }
-
-    span {
-        position: absolute;
-        margin-left: 23px;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .sidebar .link-sidebar {
-        height: 60px;
-    }
-
-    .sidebar .link-sidebar i {
-        margin-left: -10px;
-    }
-
-    .link-sidebar:hover {
-        width: 200px;
-        background: inherit;
-    }
-
-    .sidebar .link-sidebar:hover span {
-        opacity: 1;
-        visibility: visible;
-    }
-}
 
 /* Home Page */
 .card-info1 {
@@ -1011,28 +937,192 @@ input[type=range]::-ms-track {
 /* Media */
 
 /* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .conteudo_da_pagina {
-        margin-left: 0; /* Sidebar será sobreposta, então removemos o espaço lateral */
-        padding: 10px;
+@media (max-width: 600px) {
+
+    
+    .sidebar {
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
     }
 
+    header,
+    #btn,
+    #cancel {
+        display: none;
+    }
+
+    .tamanho{
+        margin-left: 20px;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar .link-sidebar {
+        height: 60px;
+    }
+
+    .sidebar .link-sidebar i {
+        margin-left: -10px;
+    }
+
+    .link-sidebar:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar .link-sidebar:hover span {
+        opacity: 1;
+        visibility: visible;
+    }
     .logo_da_empresa {
         width: 100%; /* Logo se adapta à largura da tela */
     }
 
+    .card-info1{
+        margin: 0;
+    }
+
+    .margin_sidebar {
+        margin-left: 0;
+    }
+
     .tamanho {
-        width: 100%;
+        margin-top: 50px;
+        width: 80%;
         padding: 5px;
         height: auto;
         flex-direction: column;
         align-items: center;
     }
 
+    #imagem-juros{
+        width: 70%;
+    }
+
+    #main-educacao {
+        margin-left: 0;
+        padding: 20px;
+        font-family: system-ui;
+    }
+
+    .conteudo_da_pagina {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+
+    .tamanho {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .valores_saldo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacoes {
+        margin-bottom: 10px;
+    }
+
     .alinhamento_controle_finaciamento {
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+    }
+
+    #modal, #modal2 {
+        width: 90%;
+        height: auto;
+        left: 50%;
+        padding: 20px;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #lista-transacoes {
+        width: 100%;
+    }
+
+    .form-group input[type=date]{
+        width: 95%;
+    }
+    
+}
+
+
+@media (min-width: 601px ) and (max-width: 1300px) {
+    #imagem-juros{
+        width: 50%;
+    }
+
+    .sidebar {
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header,
+    #btn,
+    #cancel {
+        display: none;
+    }
+
+    .tamanho{
+        margin-left: 20px;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar .link-sidebar {
+        height: 60px;
+    }
+
+    .sidebar .link-sidebar i {
+        margin-left: -10px;
+    }
+
+    .link-sidebar:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar .link-sidebar:hover span {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .conteudo_da_pagina{
+        width: 97.8%;
+        margin-left: 0;
     }
 }
 
+/* @media (min-width: 1024px ) {
+    .conteudo_da_pagina{
+        width: 68.4%;
+    }
+
+    .logo_da_empresa{
+        width: 500px;
+    }
+
+    .cards{
+        margin-left: 10px;
+    }
+} */
