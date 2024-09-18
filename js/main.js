@@ -216,3 +216,19 @@ function editar(index) {
   document.getElementById('modal-container2').classList.add('mostrar');
 }
 
+// Educação
+// Função para alternar a visibilidade do conteúdo
+function alternarConteudo(element) {
+  // Seleciona o conteúdo associado ao botão clicado
+  const cardContent = element.nextElementSibling;
+  
+  // Alterna a classe "ativo", que define se o conteúdo está visível ou não
+  cardContent.classList.toggle('ativo');
+  
+  // Alterna o texto do botão entre "Mostrar" e "Esconder"
+  if (cardContent.classList.contains('ativo')) {
+      element.textContent = "Voltar";
+  } else {
+      element.textContent = element.getAttribute('data-titulo'); // Retorna o título original do botão
+  }
+}

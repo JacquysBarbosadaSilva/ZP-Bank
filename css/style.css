@@ -856,82 +856,185 @@ input[type=range]::-ms-track {
 
 /* Educação */
 
+/* Layout geral */
 #main-educacao {
-    margin-left: 310px;
-    padding: 20px;
-    font-family: system-ui;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-left: 480px;
+    padding: 40px;
+    width: calc(100% - 260px);
 }
 
-#h1-educacao {
-    margin-top: 20px;
+h1#h1-educacao {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
     text-align: center;
-}
-
-#imagem-juros {
-    width: 800px;
-    margin-left: 185px;
-}
-
-#introducao-juros {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    font-size: 18px;
-    margin-right: 40px;
-}
-
-#card-meio{
-    grid-column: 2;
-    grid-row: 3;
-}
-
-#container-educacao {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.p-educacao {
-    max-height: 0;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    width: 300px;
-    transition: 0.7s;
-    margin-top: 10px;
-}
-
-.p-educacao.show {
-    max-height: 150px;
-    padding: 5px;
-    width: 280px;
-    border-radius: 10px;
-}
-
-.escrita-card {
-    padding: 10px;
-}
-
-.botao-juros {
-    background-color: #797979;
-    color: white;
-    cursor: pointer;
-    height: 200px;
-    border-radius: 10px;
-    width: 300px;
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.active.botao-juros {
-    background-color: #202020;
 }
 
 .section-educacao {
-    height: 100vh;
+    margin-bottom: 40px;
 }
 
+#introducao-juros {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+#imagem-juros {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards de educação */
+#container-educacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-juros {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-juros:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.botao-juros {
+    width: 100%;
+    background: linear-gradient(#176273, #102226);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao-juros:hover {
+    background-color: #34495e;
+}
+
+.p-educacao {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Classe que torna o conteúdo visível */
+.p-educacao.ativo {
+    display: block;
+}
+
+.escrita-card {
+    margin: 0;
+}
+
+/* Estilo especial para o card do meio */
+#card-meio {
+    grid-column: 2;
+}
+
+#card-meio .botao-juros {
+    background-color: #e67e22;
+}
+
+#card-meio .botao-juros:hover {
+    background-color: #d35400;
+}
+
+.imagem-card-juros{
+    margin: auto;
+    display: flex;
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px ){
+    #main-educacao {
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    #container-educacao {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    #card-meio {
+        grid-column: span 1;
+    }
+
+    h1#h1-educacao {
+        font-size: 28px;
+    }
+
+    #introducao-juros {
+        font-size: 16px;
+    }
+
+    #imagem-juros {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #container-educacao {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    h1#h1-educacao {
+        font-size: 24px;
+    }
+
+    #introducao-juros {
+        font-size: 14px;
+    }
+
+    #imagem-juros {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #container-educacao {
+        grid-template-columns: 1fr;
+    }
+
+    h1#h1-educacao {
+        font-size: 20px;
+    }
+
+    #introducao-juros {
+        font-size: 14px;
+    }
+
+    #imagem-juros {
+        max-width: 100%;
+    }
+
+    .card-juros {
+        padding: 15px;
+    }
+
+    .botao-juros {
+        font-size: 16px;
+    }
+}
 
 
 /* Media */
