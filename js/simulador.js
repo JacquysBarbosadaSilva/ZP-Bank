@@ -34,16 +34,16 @@ document.getElementById('select-id').addEventListener('change', atualizarTaxaDeJ
 atualizarTaxaDeJuros();
 
 // *********************************************Button Implementado******************************************************************
-// Função para calcular financiamento
+// Função para calcular financiamento com juros compostos
 function calcularFinanciamento(valor, meses, taxa) {
-    const taxaMensal = taxa / 100 / 12;
-    const parcela = valor * taxaMensal / (1 - Math.pow((1 + taxaMensal), -meses));
-    const totalJuros = (parcela * meses) - valor;
-    const custoTotal = parcela * meses;
+    const taxaMensal = taxa / 100 / 12;  // Convertendo a taxa anual para taxa mensal
+    const montanteFinal = valor * Math.pow((1 + taxaMensal), meses);  // Fórmula de juros compostos
+    const totalJuros = montanteFinal - valor;  // Juros totais pagos
+    const parcela = montanteFinal / meses;  // Valor de cada parcela
 
     return {
         parcela: parcela.toFixed(2),
-        totalCredito: custoTotal.toFixed(2),
+        totalCredito: montanteFinal.toFixed(2),
         jurosPago: totalJuros.toFixed(2)
     };
 }
