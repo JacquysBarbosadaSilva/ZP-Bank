@@ -860,9 +860,8 @@ input[type=range]::-ms-track {
 #main-educacao {
     max-width: 1000px;
     margin: 0 auto;
-    margin-left: 480px;
+    margin-left: 240px;
     padding: 40px;
-    width: calc(100% - 260px);
 }
 
 h1#h1-educacao {
@@ -1034,6 +1033,16 @@ h1#h1-educacao {
     .botao-juros {
         font-size: 16px;
     }
+
+    .inform-card{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .paragrafo-text {
+        text-align: justify;
+    }
 }
 
 
@@ -1163,7 +1172,7 @@ h1#h1-educacao {
 }
 
 
-@media (min-width: 601px ) and (max-width: 1300px) {
+@media (min-width: 401px ) and (max-width: 1000px) {
     #imagem-juros{
         width: 50%;
     }
@@ -1214,6 +1223,21 @@ h1#h1-educacao {
         width: 97.8%;
         margin-left: 0;
     }
+
+    .card-info1{
+        margin-left: 0;
+    }
+
+    .inform-card{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .paragrafo-text {
+        text-align: justify;
+    }
+
 }
 
 /* @media (min-width: 1024px ) {
