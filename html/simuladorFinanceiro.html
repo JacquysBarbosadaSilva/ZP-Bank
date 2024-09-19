@@ -63,7 +63,7 @@
                 </select>
 
                 <label for="valor">Valor total (R$):</label>
-                <input type="number" id="valor" name="number">
+                <input type="number" id="valor" min="0" name="number">
 
                 <label for="prazo">Prazo (Meses):</label>
                 <input type="range" id="meses" min="1" max="360" oninput="mudarMeses(this.value)" value="1" />

@@ -687,7 +687,7 @@ input[type="text"] {
 }
 
 #descricao, #valor{
-    padding: 10px;
+    border-color: black;
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
